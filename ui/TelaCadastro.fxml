@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+
+
+<GridPane id="GridPane" prefHeight="350.0" prefWidth="400.0" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/fx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mytwitter.ui.ControladorCadastro" alignment="center" hgap="10" vgap="10">
+    
+    <padding>
+        <Insets top="20" right="40" bottom="40" left="40"/>
+    </padding>
+    <columnConstraints>
+        <ColumnConstraints minWidth="100" prefWidth="100"
+                           maxWidth="Infinity" halignment="RIGHT">
+        </ColumnConstraints>
+        <ColumnConstraints minWidth="150" prefWidth="150"
+                           maxWidth="Infinity" >
+        </ColumnConstraints>
+        <ColumnConstraints minWidth="100" prefWidth="100"
+                           maxWidth="Infinity" halignment="LEFT">
+        </ColumnConstraints>
+    </columnConstraints>
+    
+     <!-- Add Header Label -->
+    <Label text="Cadastro" GridPane.columnIndex="0" 
+           GridPane.rowIndex="0" GridPane.columnSpan="3" 
+           GridPane.rowSpan="1" GridPane.halignment="CENTER" >
+        <font>
+            <Font name="Arial" size="22" ></Font>
+        </font>
+        <GridPane.margin>
+            <Insets top="0" right="0" bottom="20" left="0"></Insets>
+        </GridPane.margin>
+    </Label>
+    <!-- Add Profile Type label -->
+    <Label text="Tipo de Conta: " GridPane.columnIndex="0" 
+           GridPane.rowIndex="1" >
+    </Label>
+    <!-- Add Profile Type Radio Button -->
+    <VBox GridPane.columnIndex="1" 
+           GridPane.rowIndex="1" GridPane.columnSpan="2" 
+           GridPane.rowSpan="2" GridPane.halignment="CENTER" >
+        <fx:define>
+            <ToggleGroup fx:id="tipoDePerfil"/>
+        </fx:define>
+        <children>
+            <RadioButton fx:id="cpfRadioButton" prefHeight="25" text="Pessoa Física" toggleGroup="$tipoDePerfil" onAction="#handleCpfButtonAction"/>
+            <RadioButton prefHeight="25" text="Pessoa Jurídica" toggleGroup="$tipoDePerfil" onAction="#handleCnpjButtonAction" />
+        </children>
+    </VBox>
+    <!-- Add Name Label -->
+    <Label text="Usuário: " GridPane.columnIndex="0" 
+           GridPane.rowIndex="3" >
+    </Label>
+    <!-- Add Name Text Field -->
+    <TextField fx:id="userField" prefHeight="30" 
+               GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+   
+
+    <!-- Add Cpf Label -->
+    <Text fx:id="cpfCnpjText" text="Cpf: " GridPane.columnIndex="0" 
+           GridPane.rowIndex="4" >
+    </Text>
+    <!-- Add Cpf Text Field -->
+    <TextField fx:id="cpfCnpjField" prefHeight="30" 
+               GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    
+
+
+
+    <!-- Add Submit Button -->
+    <Button fx:id="submitButton" text="Cadastrar"
+            prefWidth="100" prefHeight="30" defaultButton="true"
+            GridPane.columnIndex="0" GridPane.rowIndex="5"
+            GridPane.columnSpan="3" GridPane.rowSpan="1"
+            GridPane.halignment="CENTER"
+            onAction="#handleSubmitButtonAction">
+        <GridPane.margin>
+            <Insets top="20" right="0" bottom="0" left="0"></Insets>
+        </GridPane.margin>
+    </Button>
+
+    <!-- Add Cancel Button -->
+    <Button fx:id="cancelButton" text="Cancelar"
+            prefWidth="100" prefHeight="30" defaultButton="true"
+            GridPane.columnIndex="0" GridPane.rowIndex="6"
+            GridPane.columnSpan="3" GridPane.rowSpan="1"
+            GridPane.halignment="CENTER"
+            onAction="#handleCancelarButtonAction">
+        <GridPane.margin>
+            <Insets top="0" right="0" bottom="0" left="0"></Insets>
+        </GridPane.margin>
+    </Button>
+  
+
+</GridPane>

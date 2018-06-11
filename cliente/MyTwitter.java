@@ -1,14 +1,13 @@
 package mytwitter.cliente;
 
 import java.util.Vector;
-import mytwitter.repositorio.IRepositorioUsuario;
-import mytwitter.repositorio.UJCException;
+import mytwitter.repositorio.*;
 
 public class MyTwitter implements ITwitter{
 	
 	private IRepositorioUsuario repositorio;
 	
-	MyTwitter(IRepositorioUsuario repositorio){
+	public MyTwitter(IRepositorioUsuario repositorio){
 		this.repositorio = repositorio;
 	}
 
@@ -17,7 +16,7 @@ public class MyTwitter implements ITwitter{
 			repositorio.cadastrar(usuario);
 		}
 		catch(UJCException e){
-			PEException pe = new PEException(e.usuario);
+			throw new PEException(e.usuario);
 		}
 	}
 

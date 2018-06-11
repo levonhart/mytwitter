@@ -9,11 +9,11 @@ import mytwitter.cliente.PessoaJuridica;
 public class RepositorioVector implements IRepositorioUsuario {
 	private Vector<Perfil> contas;
 
-	RepositorioVector(Vector<Perfil> contas){
+	public RepositorioVector(Vector<Perfil> contas){
 			this.contas = new Vector<Perfil>(contas);
 	}
 
-	RepositorioVector(){
+	public RepositorioVector(){
 		contas = new Vector<Perfil>();
 	}
 
@@ -28,8 +28,9 @@ public class RepositorioVector implements IRepositorioUsuario {
 	public void cadastrar(Perfil usuario) throws UJCException{
 		if(buscar(usuario.getUsuario()) == null)
 			contas.add(usuario);
-		else
+		else{
 			throw new UJCException(usuario.getUsuario());
+		}
 	}
 
 	public void atualizar(Perfil usuario) throws UNCException{

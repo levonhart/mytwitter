@@ -3,7 +3,7 @@ package mytwitter.cliente;
 public class PessoaFisica extends Perfil{
 	private long cpf;
 
-	PessoaFisica(String nome){
+	public PessoaFisica(String nome){
 		super(nome);
 	}
 

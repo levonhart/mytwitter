@@ -9,7 +9,7 @@ public abstract class Perfil{
 	private Vector<Tweet> timeline;
 	private boolean ativo;
 
-	Perfil(String usuario){
+	public Perfil(String usuario){
 		this.usuario = new String(usuario);
 		seguidores = new Vector<String>();
 		timeline = new Vector<Tweet>();

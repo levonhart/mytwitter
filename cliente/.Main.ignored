@@ -1,0 +1,28 @@
+package mytwitter.cliente;
+
+import mytwitter.cliente.*;
+import mytwitter.repositorio.RepositorioVector;
+
+class Main{
+	
+	public static void main(String[] args){
+		IRepositorioUsuario rep;
+
+		rep = new RepositorioVector();
+		MyTwitter mytwitter = new MyTwitter(rep);
+
+		Perfil p = new PessoaFisica("OTal");
+		mytwitter.criarPerfil(p);
+
+		p = new PessoaFisica("numero2");
+		mytwitter.criarPerfil(p);
+
+		p = new PessoaFisica("Bosco");
+		mytwitter.criarPerfil(p);
+
+		p = new PessoaJuridica("DualJr");
+		mytwitter.criarPerfil(p);
+		
+
+	}
+}
