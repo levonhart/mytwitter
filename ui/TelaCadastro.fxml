@@ -97,7 +97,7 @@
 
     <!-- Add Cancel Button -->
     <Button fx:id="cancelButton" text="Cancelar"
-            prefWidth="100" prefHeight="30" defaultButton="true"
+            prefWidth="100" prefHeight="30"
             GridPane.columnIndex="0" GridPane.rowIndex="6"
             GridPane.columnSpan="3" GridPane.rowSpan="1"
             GridPane.halignment="CENTER"

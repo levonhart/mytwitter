@@ -86,6 +86,7 @@ public class ControladorCadastro implements Initializable{
         }
         try{
             if(p!=null) {
+                p.setAtivo(true);
                 cliente.criarPerfil(p);
                 alertPopup("Sucesso","Usuario cadastrado com sucesso. Acesse a sua conta utilizando o numero do " + (p instanceof PessoaFisica ? "CPF" : "CNPJ") + " como senha.");
                 cancelButton.fire();

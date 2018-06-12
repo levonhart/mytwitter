@@ -90,7 +90,8 @@ public class ControladorLogin {
                     root = (Parent)loader.load();
                     ControladorTelaPrincipal controlador = loader.<ControladorTelaPrincipal>getController();
                     controlador.setCliente(cliente);
-                    controlador.setUsuario(p);
+                    controlador.setUsuario(usuario);
+                    controlador.setRepositorio(repositorio);
                     Scene scene = new Scene(root);
                     stage.setScene(scene);
                     stage.setTitle("MyTwitter ~ Início");

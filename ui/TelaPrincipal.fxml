@@ -25,24 +25,32 @@
     <top>
         <HBox id="menu"  alignment="baseline_left" spacing="5">
             <Button fx:id="timelineBtn" text="Timeline"
-                            defaultButton="true"
+                            
                             onAction="#handleTimelineButtonAction">
         
             </Button>
             <Button fx:id="tweetsBtn" text="Tweets"
-                            defaultButton="true"
+                          
                             onAction="#handleTweetsButtonAction">
             
             </Button>
 
-            <Button fx:id="seguidorsBtn" text="Seguidores"
-                            defaultButton="true"
+            <Button fx:id="seguidoresBtn" text="Seguidores"
+                            
                             onAction="#handleSeguidoresButtonAction">
              
             </Button>
 
+            
+
+            <Button fx:id="cancelarBtn" text="Cancelar Perfil"
+                            
+                            >
+             
+            </Button>
+
             <Button fx:id="sairBtn" text="Sair"
-                            defaultButton="true"
+                           
                             onAction="#handleSairButtonAction">
 
             </Button>
@@ -53,12 +61,7 @@
 
 
     <center>
-
-            <ScrollPane fx:id="scrollPane" minWidth="790">
-                <content>
-                    <ListView fx:id="listaTweets" minWidth="790"/>
-                </content>            
-            </ScrollPane>
+        <ListView fx:id="listaCentro" minWidth="790"/>
 
     </center>
 
@@ -75,7 +78,13 @@
             <TextArea fx:id="textAreaTweet" maxHeight="100" minWidth="30">  
             </TextArea>
 
-            <Button fx:id="tweetarBtn" text="Tweet" alignment="BOTTOM_RIGHT">
+            <Button fx:id="tweetarBtn" text="Tweet" alignment="BOTTOM_RIGHT" onAction="#handleTweetarButtonAction" defaultButton="true">
+            </Button>
+
+            <Button fx:id="seguirBtn" text="Seguir"
+                            
+                            onAction="#handleSeguirButtonAction">
+             
             </Button>
         </HBox>
     </bottom>
